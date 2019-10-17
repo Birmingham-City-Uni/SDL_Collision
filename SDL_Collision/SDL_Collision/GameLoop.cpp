@@ -14,7 +14,7 @@ bool GameLoop::init()
 	window = SDL_CreateWindow(
 		"SDL - Collision detection",
 		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-		1280, 768,
+		640, 480,
 		SDL_WINDOW_SHOWN
 	);
 
@@ -33,6 +33,9 @@ bool GameLoop::init()
 	for (int i = 0; i < 256; i++) {
 		keyDown[i] = false;
 	}
+
+	gameBackground = new GameBackground(this->renderer);
+	gameBackground->init();
 
 	return true;
 
@@ -65,14 +68,16 @@ bool GameLoop::processInput()
 
 void GameLoop::update()
 {
-
+	gameBackground->update();
 }
 
 void GameLoop::draw()
 {
 	SDL_RenderClear(renderer);
 
+	gameBackground->drawBackground();
 
+	gameBackground->drawForeground();
 
 	SDL_RenderPresent(renderer);
 	SDL_Delay(16);
@@ -80,5 +85,5 @@ void GameLoop::draw()
 
 void GameLoop::clean()
 {
-
+	gameBackground->clean();
 }

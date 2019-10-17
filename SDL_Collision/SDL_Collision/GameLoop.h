@@ -3,6 +3,8 @@
 #include <SDL.h>
 #include <iostream>
 
+#include "GameBackground.h"
+
 
 using namespace std;
 
@@ -35,4 +37,7 @@ private:
 	SDL_Renderer * renderer;
 
 	bool keyDown[512];
+
+	//game classes
+	GameBackground * gameBackground;
 };
