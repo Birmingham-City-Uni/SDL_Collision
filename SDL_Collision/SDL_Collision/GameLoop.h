@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "GameBackground.h"
+#include "ShootableEntity.h"
 
 
 using namespace std;
@@ -40,4 +41,5 @@ private:
 
 	//game classes
 	GameBackground * gameBackground;
+	ShootableEntity * entity;
 };

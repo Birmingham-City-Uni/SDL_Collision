@@ -37,6 +37,9 @@ bool GameLoop::init()
 	gameBackground = new GameBackground(this->renderer);
 	gameBackground->init();
 
+	entity = new ShootableEntity(this->renderer);
+	entity->init();
+
 	return true;
 
 }
@@ -76,6 +79,8 @@ void GameLoop::draw()
 	SDL_RenderClear(renderer);
 
 	gameBackground->drawBackground();
+	
+	entity->draw();
 
 	gameBackground->drawForeground();
 
