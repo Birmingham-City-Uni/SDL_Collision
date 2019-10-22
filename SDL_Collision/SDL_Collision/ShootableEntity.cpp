@@ -13,7 +13,7 @@ bool ShootableEntity::init()
 {
 	srand(time(NULL));
 	//select random graphics index
-	int spriteIndex = rand() % 5;
+	int spriteIndex = rand() % 10;
 	int shotIndex = rand() % 8;
 	int stickIndex = rand() % 3;
 	std::string spriteFilePath = "cache/objects/" + entitySprites[spriteIndex];

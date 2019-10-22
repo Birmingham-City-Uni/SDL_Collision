@@ -5,7 +5,8 @@
 
 #include "GameBackground.h"
 #include "ShootableEntity.h"
-
+#include "Player.h"
+#include "TiledMap.h"
 
 using namespace std;
 
@@ -42,4 +43,7 @@ private:
 	//game classes
 	GameBackground * gameBackground;
 	ShootableEntity * entity;
+	Player * player;
+
+	TiledMap * mappy;
 };
