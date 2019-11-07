@@ -17,6 +17,11 @@ public:
 
 	void clean();
 
+	//Add this function to make the angle accessible to other classes
+	float getAngle() {
+		return rotationAngle;
+	}
+
 private:
 	SDL_Renderer * renderer;
 	SDL_Texture * playerTexture;

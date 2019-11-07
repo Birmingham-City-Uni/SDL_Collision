@@ -5,6 +5,7 @@
 
 #include "Player.h"
 #include "MeteorManager.h"
+#include "BulletManager.h"
 
 using namespace std;
 
@@ -40,5 +41,6 @@ private:
 
 	Player * player;
 	MeteorManager * mm;
+	BulletManager * bm;
 
 };

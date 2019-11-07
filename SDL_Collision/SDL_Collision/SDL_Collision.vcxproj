@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BulletManager.h" />
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="MeteorManager.h" />
     <ClInclude Include="Player.h" />
