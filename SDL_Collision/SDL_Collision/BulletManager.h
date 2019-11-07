@@ -19,6 +19,7 @@ struct Bullet {
 };
 
 class BulletManager {
+	friend class MeteorManager;//gives meteorManager access to private variables
 public:
 	BulletManager(SDL_Renderer * renderer, Player * player) : renderer(renderer), player(player) {}
 

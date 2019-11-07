@@ -36,10 +36,12 @@ bool GameLoop::init()
 
 	player = new Player(this->renderer);
 	player->init();
-	mm = new MeteorManager(this->renderer);
-	mm->init();
+
 	bm = new BulletManager(this->renderer, this->player);
 	bm->init();
+
+	mm = new MeteorManager(this->renderer, this->bm);
+	mm->init();
 	return true;
 
 }
