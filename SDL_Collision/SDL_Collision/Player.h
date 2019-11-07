@@ -9,6 +9,8 @@ public:
 
 	bool init();
 
+	void processInput(bool * keyDown);
+
 	void update();
 
 	void draw();
@@ -17,9 +19,7 @@ public:
 
 private:
 	SDL_Renderer * renderer;
+	SDL_Texture * playerTexture;
+	float rotationAngle;
 
-	SDL_Texture * rifle;
-	SDL_Texture * crosshair;
-
-	SDL_Rect crossHairPosition;
 };

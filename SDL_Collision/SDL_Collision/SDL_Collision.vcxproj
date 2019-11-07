@@ -145,18 +145,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="GameBackground.h" />
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="ShootableEntity.h" />
-    <ClInclude Include="TiledMap.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameBackground.cpp" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="ShootableEntity.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

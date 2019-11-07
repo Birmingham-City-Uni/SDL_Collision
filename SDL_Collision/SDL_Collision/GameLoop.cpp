@@ -34,18 +34,8 @@ bool GameLoop::init()
 		keyDown[i] = false;
 	}
 
-	//gameBackground = new GameBackground(this->renderer);
-	//gameBackground->init();
-	//
-	//entity = new ShootableEntity(this->renderer);
-	//entity->init();
-	//
-	//player = new Player(this->renderer);
-	//player->init();
-
-	mappy = new TiledMap(this->renderer);
-	mappy->init();
-
+	player = new Player(this->renderer);
+	player->init();
 	return true;
 
 }
@@ -72,28 +62,21 @@ bool GameLoop::processInput()
 
 	}
 
+	player->processInput(keyDown);
+
 	return true;
 }
 
 void GameLoop::update()
 {
-	//gameBackground->update();
-	//player->update();
+	player->update();
 }
 
 void GameLoop::draw()
 {
 	SDL_RenderClear(renderer);
 
-	//gameBackground->drawBackground();
-	
-	//entity->draw();
-
-	//gameBackground->drawForeground();
-
-	//player->draw();
-
-	mappy->draw();
+	player->draw();
 
 	SDL_RenderPresent(renderer);
 	SDL_Delay(16);
@@ -101,6 +84,5 @@ void GameLoop::draw()
 
 void GameLoop::clean()
 {
-	//gameBackground->clean();
-	//player->clean();
+	player->clean();
 }

@@ -3,10 +3,7 @@
 #include <SDL.h>
 #include <iostream>
 
-#include "GameBackground.h"
-#include "ShootableEntity.h"
 #include "Player.h"
-#include "TiledMap.h"
 
 using namespace std;
 
@@ -40,10 +37,6 @@ private:
 
 	bool keyDown[512];
 
-	//game classes
-	GameBackground * gameBackground;
-	ShootableEntity * entity;
 	Player * player;
 
-	TiledMap * mappy;
 };
