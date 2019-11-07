@@ -36,6 +36,8 @@ bool GameLoop::init()
 
 	player = new Player(this->renderer);
 	player->init();
+	mm = new MeteorManager(this->renderer);
+	mm->init();
 	return true;
 
 }
@@ -70,6 +72,7 @@ bool GameLoop::processInput()
 void GameLoop::update()
 {
 	player->update();
+	mm->update();
 }
 
 void GameLoop::draw()
@@ -77,6 +80,7 @@ void GameLoop::draw()
 	SDL_RenderClear(renderer);
 
 	player->draw();
+	mm->draw();
 
 	SDL_RenderPresent(renderer);
 	SDL_Delay(16);
@@ -85,4 +89,5 @@ void GameLoop::draw()
 void GameLoop::clean()
 {
 	player->clean();
+	mm->clean();
 }

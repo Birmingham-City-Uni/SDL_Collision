@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "Player.h"
+#include "MeteorManager.h"
 
 using namespace std;
 
@@ -38,5 +39,6 @@ private:
 	bool keyDown[512];
 
 	Player * player;
+	MeteorManager * mm;
 
 };
